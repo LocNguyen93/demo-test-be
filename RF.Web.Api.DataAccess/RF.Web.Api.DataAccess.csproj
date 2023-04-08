@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.16" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ext.Shared.DataAccess.Dapper\Ext.Shared.DataAccess.Dapper.csproj" />
+    <ProjectReference Include="..\Ext.Shared.DataAccess\Ext.Shared.DataAccess.csproj" />
+    <ProjectReference Include="..\Ext.Shared\Ext.Shared.csproj" />
+    <ProjectReference Include="..\RF.Web.Api.AppSettings\RF.Web.Api.AppSettings.csproj" />
+    <ProjectReference Include="..\RF.Web.Api.Entities\RF.Web.Api.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

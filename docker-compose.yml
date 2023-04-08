@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  
+  dev:
+    image: idc-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ASPNETCORE_PORT: ${ASPNETCORE_PORT}
+    ports:
+      - ${ASPNETCORE_PORT}:${ASPNETCORE_PORT}
+
+  staging:
+    image: idc-staging
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ASPNETCORE_PORT: ${ASPNETCORE_PORT}
+    ports:
+      - ${ASPNETCORE_PORT}:${ASPNETCORE_PORT}
+  
+  prod:
+    image: idc-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ASPNETCORE_PORT: ${ASPNETCORE_PORT}
+    ports:
+      - ${ASPNETCORE_PORT}:${ASPNETCORE_PORT}
+  
+volumes:
+  cache:
+    driver: local
